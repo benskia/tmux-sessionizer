@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 toSearch=(
-    $HOME/.config/
-    $HOME/Documents/
     $HOME/Workspaces/github.com/benskia/
+    $HOME/Documents/
+    $HOME/.config/
 )
 
 switch_to() {
