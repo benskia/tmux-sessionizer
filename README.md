@@ -1,7 +1,10 @@
-## tmux sessionizer
-its a script that does everything awesome at all times
+# TMUX Sessionizer
+
+A fork of ThePrimeagen's tmux-sessionizer script. Provides a selection of dirs
+in which to start a tmux session.
 
 ## Usage
+
 ```bash
 tmux-sessionizer [<partial name of session>]
 ```

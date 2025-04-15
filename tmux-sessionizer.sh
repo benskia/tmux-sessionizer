@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+
+toSearch=(
+    $HOME/.config/
+    $HOME/Documents/
+    $HOME/Workspaces/github.com/benskia/
+)
+
 switch_to() {
     if [[ -z $TMUX ]]; then
         tmux attach-session -t $1
@@ -22,9 +29,7 @@ hydrate() {
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    # If someone wants to make this extensible, i'll accept
-    # PR
-    selected=$(find ~/ ~/personal ~/personal/dev/env/.config -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ${toSearch[@]} -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
